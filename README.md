@@ -1,5 +1,5 @@
-# Auto-IP-Rotation-with-Tor-TorNet-on-Kali-Linux
-#### 1.TOR
+#### Auto-IP-Rotation-with-Tor-TorNet-on-Kali-Linux
+# 1.TOR
 
 Installing Tor plays a central role in changing your IP address by routing your internet traffic through a global network of volunteer-operated servers called Tor relays. Here's how it works and why it's essential:
 
@@ -16,35 +16,36 @@ Without installing Tor, tools like TorNet, ProxyChains, or Tor IP Changer won’
 Tor provides the SOCKS5 proxy at 127.0.0.1:9050, which is what these tools use to route and rotate your traffic.
 
 It enables commands like SIGNAL NEWNYM, which tells Tor to generate a new identity (i.e., a new IP address).
-### 🚀 Commands Used
 
-# Update system packages
+##🚀 Commands Used
+
+### Update system packages
 '''bash 
 sudo apt update
 '''
 
-# Install Tor service (background daemon)
+### Install Tor service (background daemon)
 '''bash
 sudo apt install tor
 '''
 
-# for changing ip you have to set some settings in fire fox or any brouser that you use in network proxy
+#### for changing ip you have to set some settings in fire fox or any brouser that you use in network proxy
 ![Screenshot 2025-06-27 175316](https://github.com/user-attachments/assets/99ab6e39-c61f-4ee3-8382-6e5b49f4409d)
 ![Screenshot 2025-06-27 175323](https://github.com/user-attachments/assets/3c42369a-a3f0-40ce-8b25-2158c31e486e)
 ![Screenshot 2025-06-27 175359](https://github.com/user-attachments/assets/c687b61a-546b-479b-8ce6-97803b770fef)
 ![Screenshot 2025-06-27 175437](https://github.com/user-attachments/assets/19b81263-8fc5-4b9e-b15c-e606ddee0f75)
 
-# activate tor by
+#### activate tor by
 '''bash
 sudo systemctl start tor
 '''
 
-# check status of tor is active or not
+#### check status of tor is active or not
 '''bash
 sudo systectl status tor
 '''
 
-#### 2.TORNET
+# 2.TORNET
 Installing TorNet is what transforms the Tor network from a passive anonymity layer into an active IP rotation engine. Here's how it fits into the picture:
 
 ## 🔄 What TorNet Actually Does
@@ -80,7 +81,7 @@ Monitors and displays your current IP
 
 Automates the entire process
 
-### 🚀 Commands Used
+## 🚀 Commands Used
 '''bash
 sudo pip install tornet
 '''
@@ -122,7 +123,7 @@ python3 virtualenv
 '''
 A Python virtual environment is like a personal sandbox where you can install packages and run Python code without affecting your system-wide Python setup. It’s especially useful in cybersecurity projects like yours, where different tools might require different versions of libraries.
 
-###🧱 What Is a Virtual Environment?
+##🧱 What Is a Virtual Environment?
 A virtual environment is an isolated directory that contains:
 
 Its own Python interpreter
