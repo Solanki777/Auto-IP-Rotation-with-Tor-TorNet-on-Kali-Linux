@@ -91,7 +91,7 @@ sudo pip install tornet
 ##solution:
 ![Screenshot 2025-06-27 184157](https://github.com/user-attachments/assets/5ca0e502-5511-4271-9e3d-a0d14cce9794)
 
-the install python
+then install python3
 ```bash
 sudo apt install python3 
 ```
