@@ -20,10 +20,8 @@ It enables commands like SIGNAL NEWNYM, which tells Tor to generate a new identi
 ##🚀 Commands Used
 
 ### Update system packages
-'''
-bash 
-sudo apt update
-'''
+sudo apt update -y \\\`
+
 
 ### Install Tor service (background daemon)
 '''bash
