@@ -109,7 +109,7 @@ The pip or pipx tools (which install Python packages) require Python3 to functio
 ## promblem 2: externally managed environment
 Ah, that “externally-managed-environment” message is a common roadblock when using pip on newer versions of Kali or Debian-based systems. It’s not a TorNet-specific issue—it’s Python’s way of saying: “Hey, your system manages Python packages through APT, not pip, so I’m blocking this to avoid breaking things.”
 
-##🧩 Why This Happens
+## 🧩 Why This Happens
 Your system is protecting itself from potential conflicts between:
 
 System-managed packages (via apt)
@@ -124,7 +124,7 @@ python3 virtualenv
 ```
 A Python virtual environment is like a personal sandbox where you can install packages and run Python code without affecting your system-wide Python setup. It’s especially useful in cybersecurity projects like yours, where different tools might require different versions of libraries.
 
-##🧱 What Is a Virtual Environment?
+## 🧱 What Is a Virtual Environment?
 A virtual environment is an isolated directory that contains:
 
 Its own Python interpreter
@@ -146,7 +146,7 @@ virtualenv <NAMEOFENV>
 ```
 ![Screenshot 2025-06-27 184504](https://github.com/user-attachments/assets/58c680ce-a361-4e97-a963-be2bb017a432)
 
-##🧩 Why Use a Virtual Environment for RouterSploit?
+## 🧩 Why Use a Virtual Environment for RouterSploit?
 RouterSploit is a Python-based exploitation framework, and like many Python tools, it has specific dependencies (like requests, paramiko, pycrypto, etc.). These dependencies might:
 
 Conflict with other tools on your system
@@ -174,7 +174,7 @@ install tornet: Installs the TorNet package from PyPI.
 
 --break-system-packages: Overrides the system’s protection that prevents global pip installs.
 
-##🔐 Why This Flag Is Needed
+## 🔐 Why This Flag Is Needed
 Modern Linux distros (like Kali, Ubuntu 23+, Debian 12+) follow PEP 668, which:
 
 Blocks global pip installs to avoid breaking system-managed Python packages.
@@ -192,11 +192,11 @@ python3 pip install tornet
 ```bash 
 sudo tornet --interval 3 --count 0
 ```
-##🔄 What It Does
+## 🔄 What It Does
 This command tells TorNet to:
 Connect to the Tor control port.Send a SIGNAL NEWNYM every 3 seconds.Rotate your IP address continuously without stopping becaus of zero .You can put number instead of zero it tell how many ip you have to change
 
-##to check ip go for dnsleaktest
+## to check ip go for dnsleaktest
 
 
 
