@@ -20,14 +20,15 @@ It enables commands like SIGNAL NEWNYM, which tells Tor to generate a new identi
 ##🚀 Commands Used
 
 ### Update system packages
-'''bash
-sudo apt update 
+```bash
+sudo apt update
+```
 
 
 ### Install Tor service (background daemon)
-'''bash
+```bash
 sudo apt install tor
-'''
+```
 
 #### for changing ip you have to set some settings in fire fox or any brouser that you use in network proxy
 ![Screenshot 2025-06-27 175316](https://github.com/user-attachments/assets/99ab6e39-c61f-4ee3-8382-6e5b49f4409d)
@@ -36,14 +37,14 @@ sudo apt install tor
 ![Screenshot 2025-06-27 175437](https://github.com/user-attachments/assets/19b81263-8fc5-4b9e-b15c-e606ddee0f75)
 
 #### activate tor by
-'''bash
+```bash
 sudo systemctl start tor
-'''
+```
 
 #### check status of tor is active or not
-'''bash
+```bash
 sudo systectl status tor
-'''
+```
 
 # 2.TORNET
 Installing TorNet is what transforms the Tor network from a passive anonymity layer into an active IP rotation engine. Here's how it fits into the picture:
@@ -82,18 +83,18 @@ Monitors and displays your current IP
 Automates the entire process
 
 ## 🚀 Commands Used
-'''bash
+```bash
 sudo pip install tornet
-'''
+```
 ![Screenshot 2025-06-27 175627](https://github.com/user-attachments/assets/36650aa3-965b-48d7-a4c4-6df43594bc4d)
 ##problem 1 dpkg: error processing package python3 (--configure):
 ##solution:
 ![Screenshot 2025-06-27 184157](https://github.com/user-attachments/assets/5ca0e502-5511-4271-9e3d-a0d14cce9794)
 
 the install python
-'''bash
+```bash
 sudo apt install python3 
-,,,
+```
 
 ## 🧩 Why Python3 Is Required
 TorNet is written in Python — it uses Python scripts to control the Tor service and rotate IPs.
@@ -118,9 +119,9 @@ User-installed packages (via pip)
 This protection is defined in PEP 668, and it’s triggered when you try to install Python packages globally using pip.
 ##Solution :Use a Virtual Environment
 
-'''bash
+```bash
 python3 virtualenv
-'''
+```
 A Python virtual environment is like a personal sandbox where you can install packages and run Python code without affecting your system-wide Python setup. It’s especially useful in cybersecurity projects like yours, where different tools might require different versions of libraries.
 
 ##🧱 What Is a Virtual Environment?
@@ -140,9 +141,9 @@ You avoid conflicts between tools that need different versions of the same libra
 
 You don’t mess up your system Python by accident.
 
-'''bash
+```bash
 virtualenv <NAMEOFENV>
-'''
+```
 ![Screenshot 2025-06-27 184504](https://github.com/user-attachments/assets/58c680ce-a361-4e97-a963-be2bb017a432)
 
 ##🧩 Why Use a Virtual Environment for RouterSploit?
@@ -158,14 +159,14 @@ That’s where a virtual environment comes in — it creates a safe, isolated sp
 ![Screenshot 2025-06-27 185037](https://github.com/user-attachments/assets/7c7c7c56-a1c2-4511-9e67-fb21f91fa4ff)
 
 ##go inside the file named routersploit then install requirements.txt
-'''bash
+
 ![Screenshot 2025-06-27 185155](https://github.com/user-attachments/assets/fe325bb1-ef1a-406b-bfe3-6faeca86d189)
 ![Screenshot 2025-06-27 185457](https://github.com/user-attachments/assets/65d187e9-91bd-4c72-93e0-94b55ef3c27e)
 ![Screenshot 2025-06-27 185549](https://github.com/user-attachments/assets/6e46df60-db4f-4b90-ade1-b54167e6a9ac)
 
-'''bash
+```bash
 python3 -m pip install tornet --break-system-packages
-'''
+```
 
 python3 -m pip: Runs pip using the system’s Python interpreter (safer and more explicit than just pip).
 
@@ -183,14 +184,14 @@ Shows the error: error: externally-managed-environment.
 Using --break-system-packages tells pip: > “Yes, I know this might mess with system packages — do it anyway.”
 
 ##install tornet
-'''bash
+```bash
 python3 pip install tornet
-''bash
+```
 
 ##hurray ! tornet is downloaded in kali device for check
-'''bash 
+```bash 
 sudo tornet --interval 3 --count 0
-'''
+```
 ##🔄 What It Does
 This command tells TorNet to:
 Connect to the Tor control port.Send a SIGNAL NEWNYM every 3 seconds.Rotate your IP address continuously without stopping becaus of zero .You can put number instead of zero it tell how many ip you have to change
