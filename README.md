@@ -1,16 +1,16 @@
 # Auto-IP-Rotation-with-Tor-TorNet-on-Kali-Linux
-####1.TOR
+#### 1.TOR
 
 Installing Tor plays a central role in changing your IP address by routing your internet traffic through a global network of volunteer-operated servers called Tor relays. Here's how it works and why it's essential:
 
-##🌐 What Tor Does for IP Obfuscation
+## 🌐 What Tor Does for IP Obfuscation
 IP Masking: When you connect to the internet through Tor, your real IP address is hidden. Instead, websites see the IP of the Tor exit node, which changes periodically.
 
 Multi-layered Encryption: Tor encrypts your traffic in layers (like an onion), making it extremely difficult to trace back to you.
 
 Circuit Switching: Tor builds a new path (or "circuit") through different relays every 10 minutes by default, which results in a new IP address being assigned.
 
-##🧩 Why You Need to Install Tor
+## 🧩 Why You Need to Install Tor
 Without installing Tor, tools like TorNet, ProxyChains, or Tor IP Changer won’t work—they rely on the Tor service running in the background.
 
 Tor provides the SOCKS5 proxy at 127.0.0.1:9050, which is what these tools use to route and rotate your traffic.
@@ -28,26 +28,26 @@ sudo apt update
 sudo apt install tor
 '''
 
-#for changing ip you have to set some settings in fire fox or any brouser that you use in network proxy
+# for changing ip you have to set some settings in fire fox or any brouser that you use in network proxy
 ![Screenshot 2025-06-27 175316](https://github.com/user-attachments/assets/99ab6e39-c61f-4ee3-8382-6e5b49f4409d)
 ![Screenshot 2025-06-27 175323](https://github.com/user-attachments/assets/3c42369a-a3f0-40ce-8b25-2158c31e486e)
 ![Screenshot 2025-06-27 175359](https://github.com/user-attachments/assets/c687b61a-546b-479b-8ce6-97803b770fef)
 ![Screenshot 2025-06-27 175437](https://github.com/user-attachments/assets/19b81263-8fc5-4b9e-b15c-e606ddee0f75)
 
-#activate tor by
+# activate tor by
 '''bash
 sudo systemctl start tor
 '''
 
-#check status of tor is active or not
+# check status of tor is active or not
 '''bash
 sudo systectl status tor
 '''
 
-####2.TORNET
+#### 2.TORNET
 Installing TorNet is what transforms the Tor network from a passive anonymity layer into an active IP rotation engine. Here's how it fits into the picture:
 
-##🔄 What TorNet Actually Does
+## 🔄 What TorNet Actually Does
 TorNet is a Python-based automation tool that:
 
 Connects to the Tor service running on your system
@@ -58,10 +58,10 @@ Rotates your IP address at a user-defined interval (e.g., every 10 seconds)
 
 Provides a command-line interface to control and monitor the process
 
-##🧩 Why You Need to Install TorNet
+## 🧩 Why You Need to Install TorNet
 While Tor itself anonymizes your traffic, it doesn’t automatically change your IP on a schedule. That’s where TorNet comes in:
 
-##Feature	Tor	TorNet
+## Feature	Tor	TorNet
 Routes traffic anonymously	✅	✅
 Changes IP manually	⚠️ (requires command)	✅ (automated)
 Scheduled IP rotation	❌	✅
@@ -94,7 +94,7 @@ the install python
 sudo apt install python3 
 ,,,
 
-##🧩 Why Python3 Is Required
+## 🧩 Why Python3 Is Required
 TorNet is written in Python — it uses Python scripts to control the Tor service and rotate IPs.
 
 It’s distributed as a Python package, so you need Python3 to install and run it.
@@ -104,7 +104,7 @@ The pip or pipx tools (which install Python packages) require Python3 to functio
 
 
 
-##promblem 2: externally managed environment
+## promblem 2: externally managed environment
 Ah, that “externally-managed-environment” message is a common roadblock when using pip on newer versions of Kali or Debian-based systems. It’s not a TorNet-specific issue—it’s Python’s way of saying: “Hey, your system manages Python packages through APT, not pip, so I’m blocking this to avoid breaking things.”
 
 ##🧩 Why This Happens
