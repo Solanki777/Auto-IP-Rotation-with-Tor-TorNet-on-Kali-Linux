@@ -87,8 +87,8 @@ Automates the entire process
 sudo pip install tornet
 ```
 ![Screenshot 2025-06-27 175627](https://github.com/user-attachments/assets/36650aa3-965b-48d7-a4c4-6df43594bc4d)
-##problem 1 dpkg: error processing package python3 (--configure):
-##solution:
+## problem 1 dpkg: error processing package python3 (--configure):
+## solution:
 ![Screenshot 2025-06-27 184157](https://github.com/user-attachments/assets/5ca0e502-5511-4271-9e3d-a0d14cce9794)
 
 then install python3
