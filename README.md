@@ -20,7 +20,8 @@ It enables commands like SIGNAL NEWNYM, which tells Tor to generate a new identi
 ##🚀 Commands Used
 
 ### Update system packages
-''' bash 
+'''
+bash 
 sudo apt update
 '''
 
