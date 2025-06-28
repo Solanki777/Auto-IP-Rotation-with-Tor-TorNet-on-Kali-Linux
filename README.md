@@ -17,7 +17,7 @@ Tor provides the SOCKS5 proxy at 127.0.0.1:9050, which is what these tools use t
 
 It enables commands like SIGNAL NEWNYM, which tells Tor to generate a new identity (i.e., a new IP address).
 
-##🚀 Commands Used
+## 🚀 Commands Used
 
 ### Update system packages
 ```bash
